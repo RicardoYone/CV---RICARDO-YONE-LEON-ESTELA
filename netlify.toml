@@ -1,0 +1,8 @@
+# Static site: plain HTML and CSS, no build step.
+#
+# This file is authoritative. Netlify honours it over the publish directory
+# configured in the web UI, so the deploy target lives in version control
+# instead of a dashboard nobody can read from the repository.
+
+[build]
+  publish = "."

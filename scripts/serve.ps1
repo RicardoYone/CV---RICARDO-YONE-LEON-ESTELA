@@ -1,5 +1,7 @@
 # Minimal static file server for local preview.
-# No Node or Python required — runs on stock Windows PowerShell.
+# No Node or Python required - runs on stock Windows PowerShell.
+# Keep this file ASCII-only: PowerShell 5.1 reads BOM-less .ps1 as ANSI, and a
+# stray multi-byte character breaks the parser.
 #
 #   powershell -NoProfile -ExecutionPolicy Bypass -File scripts/serve.ps1
 #   -> http://localhost:8123/
