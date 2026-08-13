@@ -173,9 +173,12 @@ Abrí `http://localhost:8123/` y comprobá:
 
 ### El push falla con código 128 y sin mensaje de error
 
+Ocurre cuando las credenciales de GitHub todavía no están cacheadas en la
+máquina. Una vez que se hizo un push manual exitoso, deja de pasar.
+
 **Causa:** el `credential.helper` está configurado como `manager` (Git Credential
 Manager), que necesita abrir su ventana gráfica de inicio de sesión. Desde un
-shell no interactivo —como el de un agente de IA— no puede, y falla en silencio.
+shell no interactivo, como el de un agente de IA, no puede, y falla en silencio.
 
 **No es un problema de red.** `git ls-remote origin` funciona porque el
 repositorio es público y esa operación no requiere credenciales.
